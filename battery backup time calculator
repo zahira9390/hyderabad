@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class BatteryBackupCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Battery Capacity (Ah): ");
+        double capacity = sc.nextDouble();
+
+        System.out.print("Enter Battery Voltage (V): ");
+        double voltage = sc.nextDouble();
+
+        System.out.print("Enter Load Power (W): ");
+        double power = sc.nextDouble();
+
+        // Battery Energy = Ah × V
+        double energy = capacity * voltage;
+
+        // Backup Time = Energy / Load Power
+        double backupTime = energy / power;
+
+        System.out.println("Battery Backup Time = " + backupTime + " hours");
+
+        sc.close();
+    }
+}
