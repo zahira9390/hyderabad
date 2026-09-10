@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class StarDeltaCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("1. Star to Delta");
+        System.out.println("2. Delta to Star");
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            // Star to Delta
+            System.out.print("Enter Ra: ");
+            double Ra = sc.nextDouble();
+
+            System.out.print("Enter Rb: ");
+            double Rb = sc.nextDouble();
+
+            System.out.print("Enter Rc: ");
+            double Rc = sc.nextDouble();
+
+            double sum = Ra * Rb + Rb * Rc + Rc * Ra;
+
+            double Rab = sum / Rc;
+            double Rbc = sum / Ra;
+            double Rca = sum / Rb;
+
+            System.out.println("Delta resistances:");
+            System.out.println("Rab = " + Rab + " ohms");
+            System.out.println("Rbc = " + Rbc + " ohms");
+            System.out.println("Rca = " + Rca + " ohms");
+
+        } else if (choice == 2) {
+            // Delta to Star
+            System.out.print("Enter Rab: ");
+            double Rab = sc.nextDouble();
+
+            System.out.print("Enter Rbc: ");
+            double Rbc = sc.nextDouble();
+
+            System.out.print("Enter Rca: ");
+            double Rca = sc.nextDouble();
+
+            double sum = Rab + Rbc + Rca;
+
+            double Ra = (Rab * Rca) / sum;
+            double Rb = (Rab * Rbc) / sum;
+            double Rc = (Rbc * Rca) / sum;
+
+            System.out.println("Star resistances:");
+            System.out.println("Ra = " + Ra + " ohms");
+            System.out.println("Rb = " + Rb + " ohms");
+            System.out.println("Rc = " + Rc + " ohms");
+
+        } else {
+            System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+
+
+
+    
