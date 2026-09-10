@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class TransformerTurnsRatio {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Primary Voltage Vp: ");
+        double Vp = sc.nextDouble();
+
+        System.out.print("Enter Secondary Voltage Vs: ");
+        double Vs = sc.nextDouble();
+
+        double turnsRatio = Vs / Vp;
+
+        System.out.println("Transformer Turns Ratio (Ns/Np) = " + turnsRatio);
+
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class TransformerTurnsRatio {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Primary Voltage Vp: ");
+        double Vp = sc.nextDouble();
+
+        System.out.print("Enter Secondary Voltage Vs: ");
+        double Vs = sc.nextDouble();
+
+        double turnsRatio = Vs / Vp;
+
+        System.out.println("Transformer Turns Ratio (Ns/Np) = " + turnsRatio);
+
+        sc.close();
+    }
+}
