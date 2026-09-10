@@ -1,0 +1,18 @@
+# DC Motor Speed Calculator
+
+V = float(input("Enter Supply Voltage V: "))
+Ia = float(input("Enter Armature Current Ia: "))
+Ra = float(input("Enter Armature Resistance Ra: "))
+Kphi = float(input("Enter KΦ value: "))
+
+speed = (V - (Ia * Ra)) / Kphi
+
+print("DC Motor Speed =", speed, "RPM")
+
+
+  Enter Supply Voltage V: 220
+Enter Armature Current Ia: 10
+Enter Armature Resistance Ra: 1
+Enter KΦ value: 2
+
+DC Motor Speed = 105.0 RPM
