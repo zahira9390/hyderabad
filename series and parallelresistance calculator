@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class ResistanceCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Resistance Calculator ===");
+        System.out.println("1. Series");
+        System.out.println("2. Parallel");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        System.out.print("Enter R1 (ohms): ");
+        double R1 = sc.nextDouble();
+
+        System.out.print("Enter R2 (ohms): ");
+        double R2 = sc.nextDouble();
+
+        System.out.print("Enter R3 (ohms): ");
+        double R3 = sc.nextDouble();
+
+        double totalResistance;
+
+        if (choice == 1) {
+            totalResistance = R1 + R2 + R3;
+            System.out.println("Total Series Resistance = "
+                    + totalResistance + " ohms");
+
+        } else if (choice == 2) {
+            totalResistance = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+            System.out.println("Total Parallel Resistance = "
+                    + totalResistance + " ohms");
+
+        } else {
+            System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}series and parahhhh
