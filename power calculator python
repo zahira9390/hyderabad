@@ -1,0 +1,21 @@
+# Power Calculator
+# Formula: P = V × I
+
+voltage = float(input("Enter Voltage (V): "))
+current = float(input("Enter Current (A): "))
+
+power = voltage * current
+
+print("Power =", power, "Watts")
+
+
+Voltage = 230 V
+Current = 2 A
+
+Then:
+
+P = V × I = 230 × 2 = 460 W
+
+Output:
+
+Power = 460.0 Watts
