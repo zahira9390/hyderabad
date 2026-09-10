@@ -1,0 +1,55 @@
+🎨 Formula / Colour Values
+Colour	Value
+Black	0
+Brown	1
+Red	2
+Orange	3
+Yellow	4
+Green	5
+Blue	6
+Violet	7
+Grey	8
+White	9
+
+
+import java.util.Scanner;
+
+public class ResistorColorCode {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String[] colors = {
+            "black", "brown", "red", "orange", "yellow",
+            "green", "blue", "violet", "grey", "white"
+        };
+
+        System.out.print("Enter 1st color: ");
+        String c1 = sc.next().toLowerCase();
+
+        System.out.print("Enter 2nd color: ");
+        String c2 = sc.next().toLowerCase();
+
+        System.out.print("Enter 3rd color: ");
+        String c3 = sc.next().toLowerCase();
+
+        int d1 = -1, d2 = -1, multiplier = -1;
+
+        for (int i = 0; i < colors.length; i++) {
+            if (c1.equals(colors[i])) d1 = i;
+            if (c2.equals(colors[i])) d2 = i;
+            if (c3.equals(colors[i])) multiplier = i;
+        }
+
+        if (d1 == -1 || d2 == -1 || multiplier == -1) {
+            System.out.println("Invalid color entered!");
+        } else {
+            double resistance =
+                    (d1 * 10 + d2) * Math.pow(10, multiplier);
+
+            System.out.println("Resistance = " + resistance + " ohms");
+        }
+
+        sc.close();
+    }
+}
