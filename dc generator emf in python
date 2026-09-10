@@ -1,0 +1,32 @@
+Formula
+$$ E_g=\frac{P\Phi ZN}{60A} $$
+
+Where:
+
+P = Number of poles
+Φ = Flux per pole (Wb)
+Z = Total armature conductors
+N = Speed (RPM)
+A = Parallel paths
+# DC Generator EMF Calculator
+
+P = int(input("Enter number of poles P: "))
+phi = float(input("Enter flux per pole Φ (Wb): "))
+Z = int(input("Enter total armature conductors Z: "))
+N = float(input("Enter speed N (RPM): "))
+A = int(input("Enter parallel paths A: "))
+
+Eg = (P * phi * Z * N) / (60 * A)
+
+print("Generated EMF =", Eg, "Volts")
+Example
+
+If:
+
+P = 4
+Φ = 0.02 Wb
+Z = 500
+N = 1000 RPM
+A = 2
+
+Generated EMF = 333.33 V
