@@ -1,0 +1,17 @@
+import math
+
+# AC Circuit Impedance Calculator
+
+R = float(input("Enter Resistance R (ohms): "))
+L = float(input("Enter Inductance L (H): "))
+C = float(input("Enter Capacitance C (F): "))
+f = float(input("Enter Frequency f (Hz): "))
+
+XL = 2 * math.pi * f * L
+XC = 1 / (2 * math.pi * f * C)
+
+Z = math.sqrt(R**2 + (XL - XC)**2)
+
+print("\nInductive Reactance XL =", XL, "ohms")
+print("Capacitive Reactance XC =", XC, "ohms")
+print("Circuit Impedance Z =", Z, "ohms")
