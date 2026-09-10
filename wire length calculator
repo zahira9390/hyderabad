@@ -1,0 +1,22 @@
+# Wire Length Calculator
+
+R = float(input("Enter Resistance (ohms): "))
+A = float(input("Enter Cross-sectional Area (mm²): "))
+rho = float(input("Enter Resistivity (ohm-mm²/m): "))
+
+length = (R * A) / rho
+
+print("Wire Length =", length, "meters")
+
+
+Example
+
+For:
+
+Resistance = 2 Ω
+Area = 1 mm²
+Copper resistivity ≈ 0.0175 Ω·mm²/m
+
+Output:
+
+Wire Length ≈ 114.29 meters
