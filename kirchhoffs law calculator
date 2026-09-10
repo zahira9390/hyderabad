@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class KirchhoffLawCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Kirchhoff's Current Law Calculator ===");
+
+        System.out.print("Enter current I1 (A): ");
+        double I1 = sc.nextDouble();
+
+        System.out.print("Enter current I2 (A): ");
+        double I2 = sc.nextDouble();
+
+        System.out.print("Enter current I3 (A): ");
+        double I3 = sc.nextDouble();
+
+        // KCL: Incoming current = Outgoing current
+        double totalIncoming = I1 + I2;
+        double totalOutgoing = I3;
+
+        System.out.println("\nTotal Incoming Current = " + totalIncoming + " A");
+        System.out.println("Total Outgoing Current = " + totalOutgoing + " A");
+
+        if (totalIncoming == totalOutgoing) {
+            System.out.println("KCL is satisfied.");
+        } else {
+            System.out.println("KCL is NOT satisfied.");
+        }
+
+        sc.close();
+    }
+}
+
+
+Example
+
+If:
+
+I1 = 2 A
+I2 = 3 A
+I3 = 5 A
+
+Then:
+
+Incoming = 2 + 3 = 5 A
+Outgoing = 5 A
+
+✅ KCL is satisfied.
