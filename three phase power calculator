@@ -1,0 +1,39 @@
+import math
+
+# 3-Phase Power Calculator
+
+VL = float(input("Enter Line Voltage (V): "))
+IL = float(input("Enter Line Current (A): "))
+power_factor = float(input("Enter Power Factor: "))
+
+power = math.sqrt(3) * VL * IL * power_factor
+
+print("3-Phase Power =", power, "Watts")
+print("3-Phase Power =", power / 1000, "kW")
+
+
+Formula:
+
+$$ P = \sqrt{3}\times V_L\times I_L\times \cos\phi $$
+
+Where:
+
+VL = Line Voltage (V)
+IL = Line Current (A)
+cosφ = Power Factor
+P = 3-Phase Power (W)
+
+
+
+vExample
+
+If:
+
+Voltage = 400 V
+Current = 10 A
+Power Factor = 0.8
+
+Output:
+
+3-Phase Power = 5542.56 W
+Power = 5.54 kW
