@@ -1,0 +1,13 @@
+# Binary to Decimal Converter
+
+binary = input("Enter a binary number: ")
+
+decimal = int(binary, 2)
+
+print("Decimal number =", decimal)
+
+Example
+Enter a binary number: 1010
+Decimal number = 10
+
+Meaning: 1010₂ = 10₁₀
