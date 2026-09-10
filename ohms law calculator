@@ -1,0 +1,80 @@
+print("Ohm's Law Calculator")
+print("1. Calculate Voltage")
+print("2. Calculate Current")
+print("3. Calculate Resistance")
+
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    I = float(input("Enter Current (A): "))
+    R = float(input("Enter Resistance (Ω): "))
+    V = I * R
+    print("Voltage =", V, "V")
+
+elif choice == 2:
+    V = float(input("Enter Voltage (V): "))
+    R = float(input("Enter Resistance (Ω): "))
+    I = V / R
+    print("Current =", I, "A")
+
+elif choice == 3:
+    V = float(input("Enter Voltage (V): "))
+    I = float(input("Enter Current (A): "))
+    R = V / I
+    print("Resistance =", R, "Ω")
+
+else:
+    print("Invalid choice")
+
+import java.util.Scanner;
+
+public class OhmsLawCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ohm's Law Calculator");
+        System.out.println("1. Calculate Voltage");
+        System.out.println("2. Calculate Current");
+        System.out.println("3. Calculate Resistance");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            System.out.print("Enter Current (A): ");
+            double I = sc.nextDouble();
+
+            System.out.print("Enter Resistance (Ohm): ");
+            double R = sc.nextDouble();
+
+            double V = I * R;
+            System.out.println("Voltage = " + V + " V");
+
+        } else if (choice == 2) {
+            System.out.print("Enter Voltage (V): ");
+            double V = sc.nextDouble();
+
+            System.out.print("Enter Resistance (Ohm): ");
+            double R = sc.nextDouble();
+
+            double I = V / R;
+            System.out.println("Current = " + I + " A");
+
+        } else if (choice == 3) {
+            System.out.print("Enter Voltage (V): ");
+            double V = sc.nextDouble();
+
+            System.out.print("Enter Current (A): ");
+            double I = sc.nextDouble();
+
+            double R = V / I;
+            System.out.println("Resistance = " + R + " Ohm");
+
+        } else {
+            System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
