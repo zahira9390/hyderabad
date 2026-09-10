@@ -1,0 +1,13 @@
+# LED Resistor Calculator
+
+Vs = float(input("Enter Supply Voltage (V): "))
+Vled = float(input("Enter LED Voltage (V): "))
+I = float(input("Enter LED Current (mA): "))
+
+# Convert mA to A
+I = I / 1000
+
+# Calculate resistor
+R = (Vs - Vled) / I
+
+print("Required
