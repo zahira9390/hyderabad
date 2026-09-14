@@ -1,0 +1,21 @@
+# Solar vs Grid Cost Calculator
+
+print("=== Solar vs Grid Cost Calculator ===")
+
+units = float(input("Enter electricity used per month (kWh): "))
+grid_rate = float(input("Enter grid electricity rate per unit (₹): "))
+solar_cost = float(input("Enter monthly solar cost (₹): "))
+
+grid_cost = units * grid_rate
+savings = grid_cost - solar_cost
+
+print("\nGrid Electricity Cost = ₹", grid_cost)
+print("Solar Electricity Cost = ₹", solar_cost)
+print("Monthly Savings = ₹", savings)
+
+if savings > 0:
+    print("Solar is cheaper! ☀️")
+elif savings < 0:
+    print("Grid is cheaper! ⚡")
+else:
+    print("Both have the same cost.")
