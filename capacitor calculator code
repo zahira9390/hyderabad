@@ -1,0 +1,54 @@
+Capacitor Charge/Discharge Calculator — Python
+# Capacitor Calculator
+
+print("=== Capacitor Calculator ===")
+
+Q = float(input("Enter charge (Coulombs): "))
+V = float(input("Enter voltage (Volts): "))
+
+C = Q / V
+
+print("Capacitance =", C, "Farads")
+
+  import java.util.Scanner;
+
+public class CapacitorCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Capacitor Calculator ===");
+
+        System.out.print("Enter charge (Coulombs): ");
+        double Q = sc.nextDouble();
+
+        System.out.print("Enter voltage (Volts): ");
+        double V = sc.nextDouble();
+
+        double C = Q / V;
+
+        System.out.println("Capacitance = " + C + " Farads");
+
+        sc.close();
+    }
+}
+
+
+
+📝 Example
+
+If:
+
+Q = 0.02 C
+V = 10 V
+
+Then:
+
+C = 0.02 / 10 = 0.002 F
+
+Output: Capacitance = 0.002 Farads
+
+For your GitHub, you can name them:
+
+capacitor_calculator.py
+CapacitorCalculator.java
