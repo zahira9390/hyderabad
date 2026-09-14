@@ -1,0 +1,17 @@
+🔄 Transformer Efficiency Calculator
+
+Formula:
+
+η=
+Input Power
+Output Power
+	​
+
+×100
+
+# Transformer Efficiency Calculator
+
+print("=== Transformer Efficiency Calculator ===")
+
+input_power = float(input("Enter input power (W): "))
+output_power = float(input("Enter
