@@ -1,0 +1,48 @@
+Formula
+
+Power = Voltage × Current
+
+P = V × I
+
+Where:
+
+P = Solar panel power in Watts
+V = Voltage in Volts
+I = Current in Amperes
+
+
+# Solar Panel Power Calculator
+
+print("=== Solar Panel Power Calculator ===")
+
+voltage = float(input("Enter solar panel voltage (V): "))
+current = float(input("Enter solar panel current (A): "))
+
+power = voltage * current
+
+print("Solar Panel Power =", power, "Watts")
+
+
+
+import java.util.Scanner;
+
+public class SolarPanelPowerCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Solar Panel Power Calculator ===");
+
+        System.out.print("Enter solar panel voltage (V): ");
+        double voltage = sc.nextDouble();
+
+        System.out.print("Enter solar panel current (A): ");
+        double current = sc.nextDouble();
+
+        double power = voltage * current;
+
+        System.out.println("Solar Panel Power = " + power + " Watts");
+
+        sc.close();
+    }
+}
