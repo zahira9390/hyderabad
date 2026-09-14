@@ -1,0 +1,23 @@
+# Bulb/Wattage Energy Cost Calculator
+
+print("💡 Bulb/Wattage Energy Cost Calculator")
+print("--------------------------------------")
+
+wattage = float(input("Enter bulb wattage (W): "))
+hours = float(input("Enter usage hours per day: "))
+days = int(input("Enter number of days: "))
+rate = float(input("Enter electricity rate per unit (₹): "))
+
+energy = (wattage * hours * days) / 1000
+cost = energy * rate
+
+print("\n--- Result ---")
+print("Energy Consumed =", energy, "kWh")
+print("
+
+💡 Bulb/Wattage Energy Cost Calculator — Python
+
+Formula:
+
+Energy used = (Wattage × Hours × Days) / 1000 kWh
+Cost = Energy used × Electricity rate
