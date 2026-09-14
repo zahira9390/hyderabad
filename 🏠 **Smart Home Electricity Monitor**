@@ -1,0 +1,31 @@
+# Smart Home Electricity Monitor
+
+print("=== Smart Home Electricity Monitor ===")
+
+fan = float(input("Enter fan units used (kWh): "))
+light = float(input("Enter light units used (kWh): "))
+tv = float(input("Enter TV units used (kWh): "))
+ac = float(input("Enter AC units used (kWh): "))
+
+rate = float(input("Enter electricity rate per unit (₹): "))
+
+total_units = fan + light + tv + ac
+total_bill = total_units * rate
+
+print("\n--- Electricity Report ---")
+print("Fan consumption   =", fan, "kWh")
+print("Light consumption =", light, "kWh")
+print("TV consumption    =", tv, "kWh")
+print("AC consumption    =", ac, "kWh")
+
+print("\nTotal Consumption =", total_units, "kWh")
+print("Estimated Bill = ₹", total_bill)
+
+if ac >= fan and ac >= light and ac >= tv:
+    print("Highest consumption: AC ❄️")
+elif fan >= light and fan >= tv:
+    print("Highest consumption: Fan 🌀")
+elif tv >= light:
+    print("Highest consumption: TV 📺")
+else:
+    print("Highest consumption: Light 💡")
