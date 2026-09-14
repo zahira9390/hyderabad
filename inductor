@@ -1,0 +1,63 @@
+🔹 Formula
+
+For an inductor:
+
+V = L × (di/dt)
+
+So,
+
+L = V × dt / di
+
+Where:
+
+L = Inductance in Henry (H)
+V = Voltage in Volts (V)
+dt = Change in time in seconds (s)
+di = Change in current in Amperes (A)
+
+# Inductor Calculator
+
+print("=== Inductor Calculator ===")
+
+V = float(input("Enter voltage (V): "))
+dt = float(input("Enter time change (seconds): "))
+di = float(input("Enter current change (A): "))
+
+L = (V * dt) / di
+
+print("Inductance =", L, "Henry")
+
+import java.util.Scanner;
+
+public class InductorCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Inductor Calculator ===");
+
+        System.out.print("Enter voltage (V): ");
+        double V = sc.nextDouble();
+
+        System.out.print("Enter time change (seconds): ");
+        double dt = sc.nextDouble();
+
+        System.out.print("Enter current change (A): ");
+        double di = sc.nextDouble();
+
+        double L = (V * dt) / di;
+
+        System.out.println("Inductance = " + L + " Henry");
+
+        sc.close();
+    }
+}
+
+V = 10 V, dt = 2 s, di = 4 A
+
+L = (10 × 2) / 4 = 5 H
+
+GitHub file names:
+
+inductor_calculator.py
+InductorCalculator.java
