@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class DiodeCurrentCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== DIODE CURRENT CALCULATOR =====");
+
+        System.out.print("Enter diode voltage (V): ");
+        double V = sc.nextDouble();
+
+        System.out.print("Enter saturation current Is (A): ");
+        double Is = sc.nextDouble();
+
+        System.out.print("Enter ideality factor n: ");
+        double n = sc.nextDouble();
+
+        // Thermal voltage at room temperature
+        double Vt = 0.026;
+
+        // Shockley diode equation
+        double current = Is * (Math.exp(V / (n * Vt)) - 1);
+
+        System.out.println("\n===== RESULT =====");
+        System.out.printf("Diode Voltage = %.3f V%n", V);
+        System.out.printf("Saturation Current = %.6f A%n", Is);
+        System.out.printf("Ideality Factor = %.2f%n", n);
+        System.out.printf("Diode Current = %.6f A%n", current);
+
+        sc.close();
+    }
+}
