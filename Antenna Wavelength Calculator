@@ -1,0 +1,46 @@
+# Antenna Wavelength Calculator
+
+print("=== Antenna Wavelength Calculator ===")
+
+frequency = float(input("Enter frequency in MHz: "))
+
+if frequency <= 0:
+    print("Frequency must be greater than zero.")
+else:
+    frequency_hz = frequency * 1_000_000
+    c = 3 * 10**8
+
+    wavelength = c / frequency_hz
+
+    print("\n--- Result ---")
+    print("Frequency =", frequency, "MHz")
+    print("Wavelength =", round(wavelength, 3), "m")
+
+    import java.util.Scanner;
+
+public class AntennaWavelength {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Antenna Wavelength Calculator ===");
+
+        System.out.print("Enter frequency in MHz: ");
+        double frequency = sc.nextDouble();
+
+        if (frequency <= 0) {
+            System.out.println("Frequency must be greater than zero.");
+        } else {
+            double frequencyHz = frequency * 1_000_000;
+            double c = 3e8;
+
+            double wavelength = c / frequencyHz;
+
+            System.out.println("\n--- Result ---");
+            System.out.println("Frequency = " + frequency + " MHz");
+            System.out.println("Wavelength = " + wavelength + " m");
+        }
+
+        sc.close();
+    }
+}
