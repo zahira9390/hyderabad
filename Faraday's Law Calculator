@@ -1,0 +1,47 @@
+# Faraday's Law Calculator
+
+print("=== Faraday's Law Calculator ===")
+
+N = int(input("Enter number of turns (N): "))
+phi = float(input("Enter change in magnetic flux (Wb): "))
+time = float(input("Enter time (seconds): "))
+
+if time <= 0:
+    print("Time must be greater than zero.")
+else:
+    E = N * phi / time
+
+    print("\n--- Result ---")
+    print("Induced EMF =", round(E, 3), "V")
+
+
+import java.util.Scanner;
+
+public class FaradaysLaw {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Faraday's Law Calculator ===");
+
+        System.out.print("Enter number of turns (N): ");
+        int N = sc.nextInt();
+
+        System.out.print("Enter change in magnetic flux (Wb): ");
+        double phi = sc.nextDouble();
+
+        System.out.print("Enter time (seconds): ");
+        double time = sc.nextDouble();
+
+        if (time <= 0) {
+            System.out.println("Time must be greater than zero.");
+        } else {
+            double E = N * phi / time;
+
+            System.out.println("\n--- Result ---");
+            System.out.println("Induced EMF = " + E + " V");
+        }
+
+        sc.close();
+    }
+}
