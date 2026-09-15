@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class AMRadioFrequencyCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== AM RADIO FREQUENCY CALCULATOR =====");
+
+        System.out.print("Enter frequency in kHz: ");
+        double frequencyKHz = sc.nextDouble();
+
+        // Convert kHz to Hz
+        double frequencyHz = frequencyKHz * 1000;
+
+        // Speed of light
+        double speedOfLight = 3e8;
+
+        // Calculate wavelength
+        double wavelength = speedOfLight / frequencyHz;
+
+        System.out.println("\n===== RESULT =====");
+        System.out.printf("Frequency = %.2f kHz%n", frequencyKHz);
+        System.out.printf("Wavelength = %.2f meters%n", wavelength);
+
+        sc.close();
+    }
+}
