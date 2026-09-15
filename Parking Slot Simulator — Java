@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class ParkingSlotSimulator {
+
+
+def display_slots(slots):
+    print("\n===== PARKING SLOTS =====")
+
+    for i, vehicle in enumerate(slots, start=1):
+        if vehicle == "":
+            print(f"Slot {i}: Available")
+        else:
+            print(f"Slot {i}: {vehicle}")
+
+
+def park_vehicle(slots):
+    display_slots(slots)
+
+    slot = int(input("\nEnter slot number: "))
+
+    if slot < 1 or slot > len(slots):
+        print("Invalid slot number!")
+    elif slots[slot - 1] != "":
+        print("Slot is already occupied!")
+    else:
+        vehicle = input("Enter vehicle number: ")
+        slots[slot - 1] = vehicle
+        print("Vehicle parked successfully!")
+
+
+def remove_vehicle(slots):
+    display_slots(slots)
+
+    slot = int(input("\nEnter slot number to remove vehicle: "))
+
+    if slot < 1 or slot > len(slots):
+        print("Invalid slot number!")
+    elif slots[slot - 1] == "":
+        print("Slot is already empty!")
+    else:
+        slots[slot - 1] = ""
+        print("Vehicle removed successfully!")
+
+
+# Create 5 parking slots
+slots = ["", "", "", "", ""]
+
+while True:
+
+    print("\n===== PARKING SLOT SIMULATOR =====")
+    print("1. View Parking Slots")
+    print("2. Park Vehicle")
+    print("3. Remove Vehicle")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        display_slots(slots)
+
+    elif choice == "2":
+        park_vehicle(slots)
+
+    elif choice == "3":
+        remove_vehicle(slots)
+
+    elif choice == "4":
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice!")
