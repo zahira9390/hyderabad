@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class MotorEfficiencyCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== MOTOR EFFICIENCY CALCULATOR =====");
+
+        System.out.print("Enter Input Power (W): ");
+        double inputPower = sc.nextDouble();
+
+        System.out.print("Enter Output Power (W): ");
+        double outputPower = sc.nextDouble();
+
+        if (inputPower > 0 && outputPower >= 0 && outputPower <= inputPower) {
+
+            double efficiency = (outputPower / inputPower) * 100;
+            double losses = inputPower - outputPower;
+
+            System.out.println("\n===== RESULT =====");
+            System.out.println("Input Power  = " + inputPower + " W");
+            System.out.println("Output Power = " + outputPower + " W");
+            System.out.println("Power Losses = " + losses + " W");
+            System.out.println("Motor Efficiency = " + efficiency + " %");
+
+        } else {
+            System.out.println("Please enter valid power values.");
+        }
+
+        sc.close();
+    }
+}
