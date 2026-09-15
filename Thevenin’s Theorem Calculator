@@ -1,0 +1,48 @@
+# Thevenin's Theorem Calculator
+
+print("=== Thevenin's Theorem Calculator ===")
+
+Vth = float(input("Enter Thevenin Voltage (V): "))
+Rth = float(input("Enter Thevenin Resistance (Ohm): "))
+RL = float(input("Enter Load Resistance (Ohm): "))
+
+IL = Vth / (Rth + RL)
+VL = IL * RL
+
+print("\n--- Results ---")
+print("Thevenin Voltage (Vth) =", Vth, "V")
+print("Thevenin Resistance (Rth) =", Rth, "Ohm")
+print("Load Current (IL) =", round(IL, 3), "A")
+print("Load Voltage (VL) =", round(VL, 3), "V")
+
+
+import java.util.Scanner;
+
+public class TheveninTheorem {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Thevenin's Theorem Calculator ===");
+
+        System.out.print("Enter Thevenin Voltage (V): ");
+        double Vth = sc.nextDouble();
+
+        System.out.print("Enter Thevenin Resistance (Ohm): ");
+        double Rth = sc.nextDouble();
+
+        System.out.print("Enter Load Resistance (Ohm): ");
+        double RL = sc.nextDouble();
+
+        double IL = Vth / (Rth + RL);
+        double VL = IL * RL;
+
+        System.out.println("\n--- Results ---");
+        System.out.println("Thevenin Voltage (Vth) = " + Vth + " V");
+        System.out.println("Thevenin Resistance (Rth) = " + Rth + " Ohm");
+        System.out.println("Load Current (IL) = " + IL + " A");
+        System.out.println("Load Voltage (VL) = " + VL + " V");
+
+        sc.close();
+    }
+}
