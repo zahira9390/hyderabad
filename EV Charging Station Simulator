@@ -1,0 +1,57 @@
+print("===== EV CHARGING STATION SIMULATOR =====")
+
+battery_capacity = float(input("Enter battery capacity (kWh): "))
+
+import java.util.Scanner;
+
+public class EVChargingStationSimulator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== EV CHARGING STATION SIMULATOR =====");
+
+        System.out.print("Enter battery capacity (kWh): ");
+        double batteryCapacity = sc.nextDouble();
+
+        System.out.print("Enter current battery percentage (%): ");
+        double currentPercent = sc.nextDouble();
+
+        System.out.print("Enter target battery percentage (%): ");
+        double targetPercent = sc.nextDouble();
+
+        System.out.print("Enter charging power (kW): ");
+        double chargingPower = sc.nextDouble();
+
+        System.out.print("Enter electricity rate (₹ per kWh): ");
+        double rate = sc.nextDouble();
+
+        if (batteryCapacity > 0 &&
+            currentPercent >= 0 && currentPercent < 100 &&
+            targetPercent > currentPercent && targetPercent <= 100 &&
+            chargingPower > 0 && rate >= 0) {
+
+            // Calculate energy required
+            double energyRequired =
+                    batteryCapacity * (targetPercent - currentPercent) / 100;
+
+            // Calculate charging time
+            double chargingTime = energyRequired / chargingPower;
+
+            // Calculate cost
+            double chargingCost = energyRequired * rate;
+
+            System.out.println("\n===== CHARGING RESULT =====");
+
+            System.out.printf("Energy Required = %.2f kWh%n", energyRequired);
+            System.out.printf("Charging Time = %.2f hours%n", chargingTime);
+            System.out.printf("Charging Cost = ₹%.2f%n", chargingCost);
+
+        } else {
+            System.out.println("\nPlease enter valid values.");
+        }
+
+        sc.close();
+    }
+}
