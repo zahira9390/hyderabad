@@ -1,0 +1,59 @@
+import math
+
+print("===== DECIBEL CALCULATOR =====")
+print("1. Power Decibel")
+print("2. Voltage Decibel")
+
+
+import java.util.Scanner;
+
+public class DecibelCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== DECIBEL CALCULATOR =====");
+        System.out.println("1. Power Decibel");
+        System.out.println("2. Voltage Decibel");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+
+            System.out.print("Enter reference power P1 (W): ");
+            double p1 = sc.nextDouble();
+
+            System.out.print("Enter measured power P2 (W): ");
+            double p2 = sc.nextDouble();
+
+            if (p1 > 0 && p2 > 0) {
+                double db = 10 * Math.log10(p2 / p1);
+                System.out.println("Decibel = " + db + " dB");
+            } else {
+                System.out.println("Power must be greater than 0.");
+            }
+
+        } else if (choice == 2) {
+
+            System.out.print("Enter reference voltage V1 (V): ");
+            double v1 = sc.nextDouble();
+
+            System.out.print("Enter measured voltage V2 (V): ");
+            double v2 = sc.nextDouble();
+
+            if (v1 > 0 && v2 > 0) {
+                double db = 20 * Math.log10(v2 / v1);
+                System.out.println("Decibel = " + db + " dB");
+            } else {
+                System.out.println("Voltage must be greater than 0.");
+            }
+
+        } else {
+            System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}
