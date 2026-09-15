@@ -1,0 +1,47 @@
+# Norton's Theorem Calculator
+
+print("=== Norton's Theorem Calculator ===")
+
+IN = float(input("Enter Norton Current (A): "))
+RN = float(input("Enter Norton Resistance (Ohm): "))
+RL = float(input("Enter Load Resistance (Ohm): "))
+
+IL = IN * RN / (RN + RL)
+VL = IL * RL
+
+print("\n--- Results ---")
+print("Norton Current (IN) =", IN, "A")
+print("Norton Resistance (RN) =", RN, "Ohm")
+print("Load Current (IL) =", round(IL, 3), "A")
+print("Load Voltage (VL) =", round(VL, 3), "V")
+
+import java.util.Scanner;
+
+public class NortonTheorem {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Norton's Theorem Calculator ===");
+
+        System.out.print("Enter Norton Current (A): ");
+        double IN = sc.nextDouble();
+
+        System.out.print("Enter Norton Resistance (Ohm): ");
+        double RN = sc.nextDouble();
+
+        System.out.print("Enter Load Resistance (Ohm): ");
+        double RL = sc.nextDouble();
+
+        double IL = IN * RN / (RN + RL);
+        double VL = IL * RL;
+
+        System.out.println("\n--- Results ---");
+        System.out.println("Norton Current (IN) = " + IN + " A");
+        System.out.println("Norton Resistance (RN) = " + RN + " Ohm");
+        System.out.println("Load Current (IL) = " + IL + " A");
+        System.out.println("Load Voltage (VL) = " + VL + " V");
+
+        sc.close();
+    }
+}
