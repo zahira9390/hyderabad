@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ElectricityLoadCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== ELECTRICITY LOAD CALCULATOR =====");
+
+        System.out.print("Enter number of appliances: ");
+        int n = sc.nextInt();
+
+        double totalPower = 0;
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("\nAppliance " + i);
+
+            System.out.print("Enter appliance name: ");
+            String name = sc.next();
+
+            System.out.print("Enter power rating (W): ");
+            double power = sc.nextDouble();
+
+            System.out.print("Enter quantity: ");
+            int quantity = sc.nextInt();
+
+            double appliancePower = power * quantity;
+            totalPower += appliancePower;
+
+            System.out.println(name + " Load = " + appliancePower + " W");
+        }
+
+        double totalLoadKW = totalPower / 1000;
+
+        System.out.print("\nEnter supply voltage (V): ");
+        double voltage = sc.nextDouble();
+
+        double current = totalPower / voltage;
+
+        System.out.println("\n===== RESULT =====");
+        System.out.println("Total Load = " + totalPower + " W");
+        System.out.println("Total Load = " + totalLoadKW + " kW");
+        System.out.println("Approximate Current = " + current + " A");
+
+        sc.close();
+    }
+}
