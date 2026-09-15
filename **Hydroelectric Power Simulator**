@@ -1,0 +1,28 @@
+print("===== HYDROELECTRIC POWER SIMULATOR =====")
+
+rho = 1000       # Water density (kg/m^3)
+g = 9.81         # Gravity (m/s^2)
+
+Q = float(input("Enter water flow rate (m^3/s): "))
+H = float(input("Enter water head (m): "))
+efficiency = float(input("Enter turbine efficiency (%): "))
+
+if Q > 0 and H > 0 and 0 < efficiency <= 100:
+
+    eta = efficiency / 100
+
+    power = rho * g * Q * H * eta
+
+    power_kw = power / 1000
+    power_mw = power / 1000000
+
+    print("\n===== RESULT =====")
+    print("Water Flow Rate =", Q, "m^3/s")
+    print("Water Head =", H, "m")
+    print("Efficiency =", efficiency, "%")
+    print("Generated Power =", round(power, 2), "W")
+    print("Generated Power =", round(power_kw, 2), "kW")
+    print("Generated Power =", round(power_mw, 4), "MW")
+
+else:
+    print("Please enter valid values.")
